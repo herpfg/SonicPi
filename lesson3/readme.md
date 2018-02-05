@@ -23,3 +23,5 @@ until i > 2
    i = i + 1
 end
 ```
+A  datastructure (like an array) typically are also provided  with functions (in other languages: methods), which support a typical handling of that structure in a program. For example: [60,64,67].size provides the length of an Array. There are many different functions for any structure. It makes no sense to learn them: You will learn them automatically when programming and solve a problem. 
+Typically a program-language, which is designed for a special Problem-Domain, has its own structures. Here in Sonic Pi, created to make music, there are structures (combined with methods)  to support making music. One essential Structur is a ring:  
