@@ -15,14 +15,11 @@ In professional programming you often ,iterate' an Array. this means, you will w
 you should play all notes one after the other. A typical structure for that in many languages is like this:
 
 
-*i = 0*
-
-*until i > 2*
-
-     *play [60,64,67][i]*
-     
-     *sleep 1*
-     
-     *i = i + 1*
-   
-*end*
+```
+i = 0
+until i > 2
+   play [60,64,67][i]
+   sleep 1
+   i = i + 1
+end
+```
