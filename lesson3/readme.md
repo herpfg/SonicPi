@@ -81,13 +81,21 @@ myRing = [60,64,67].ring
 ```
 *  Chords
 
-Now we will learn, what a chord is: a Chord in a musical sense is a number of notes: Minimum 2, frequently 3 , sometimes more than 3 notes. The right structure for that would be an array, as we've seen above. For example: [60,64,67]. In Sonic Pi a Chord is defined as a ring, because often in melodys, consist of a loop, you will take single notes out of a chord. Since we've seen above, it's quiet easy to handle that with the ring as structure. Lets see and hear, how you can get chords in Sonic Pi:
+Now we will learn, what a chord is: a Chord in a musical sense is a number of notes: Minimum 2, frequently 3 , sometimes more than 3 notes. The right structure for that would be an array, as we've seen above. For example: [60,64,67]. In Sonic Pi a chord is defined as a ring, because often in melodys, consist of a playing loop, you will take single notes out of a chord. Since we've seen above, it's quiet easy to handle that with the ring as structure. Lets see and hear, how you can get chords in Sonic Pi:
 
 ```
 puts chord(:c4, :major) # the same as [60,64,67].ring
 puts chord(:e4,:minor)
 ```
+You will learn or already know, which rule chords play in music: You'll learn it in harmony teaching. Often in praxis  it's simply that: Chords sounds different, take a specially if it sounds good for you. There exists rules, which chords you should take in combination to design music. For now, you will get in a work-sheet, which chords you have to play. But before that will learn a special programming-construction, which may help you in programming:
 
+* Lets program a Chord-Melody
+
+work: Program one bar, consist of 4 beats, playing chord( :a3,:minor) along this pattern: (X - - X - - X - X - X - - - X-) 
+
+
+
+ 
 
 
 
