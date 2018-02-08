@@ -93,10 +93,9 @@ You will learn or already know, which rule chords play in music: You'll learn it
 
 work: Program one bar, consist of 4 beats, playing chord( :a3,:minor) along this pattern: (X - - X - - X - X - X - - - X-) 
 
+* Lets define a function to shorten the code
 
-
- 
-
+So, you have done this: you play one bar the chord in a special rhythm. Now, you should change the chord for the following bar, but the rythm should be the same. How would you now program that? Right, one way is: Copy the lines of code, paste it after the first bar and change the chord. Ok!. Then after the second bar, you should change the chord again. How would you do that? Ok: again we make it with copy and paste...So, what will grow up after i.e. 10 bars you always should change the chord? Yes: there would be tone's of source-code lines. Now we will learn, how we can get it simpler: define a *function* !
 
 
 +
