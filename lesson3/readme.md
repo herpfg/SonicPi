@@ -37,7 +37,16 @@ until  i > 1000
    i = i + 1
 end
 ```
-You can see in the protokoll, that the puts runs periodically through the ring. This is very useful in a live_loop:
+You can see in the protokoll, that the puts runs periodically through the ring. In Sonic Pi you can play also a ring, which has no different to play an array, as you can hear:
+```
+myArray = [60,64,67]
+myRingOutofmyArray = [60,64,67].ring
+play myArray
+sleep 1
+play myRingOutofmyArray
+```
+
+A ring is very useful in a live_loop:
 ```
 i = 0
 myRing = [60,64,67].ring
@@ -47,7 +56,7 @@ live_loop :demo_ring do
    sleep 1
  end
 ```
-in this live_loop you shouldn't take care of the right number of i. In an array you have to take care, that the number of i is not more than 2 (and not less than 0). Sonic Pi prevents also something special for you: the ticker in a live_loop. Run this and hear:
+in this live_loop you shouldn't take care of the right number of i. In an array you have to take care, that the number of i is not more than 2 (and not less than 0). Sonic Pi prevents also something special for you: the *ticker* in a live_loop. Run this and hear:
 
 ```
 myRing = [60,64,67].ring
@@ -56,7 +65,7 @@ live_loop :demo_ring do
    sleep 1
  end
 ```
-That is the same like the previous loop, except you should not use a index and should not increment the index. This will be done in the function (or: method) of the structur ring. Be aware,that internally is an index, which increments for you. you can take that internal index by using the variable *look*, as you can see:
+That is the same like the previous loop, except you should not use a index and should not increment the index. This will be done in the function (or: method) *tick* of the structur ring. Be aware, that there is an index internally. Sonic Pi increments the index for you. you can take that internal index by using the variable *look*, as you can see:
 ```
 myRing = [60,64,67].ring
    live_loop :demo_ring do
@@ -69,6 +78,15 @@ myRing = [60,64,67].ring
    sleep 1
  end
 
+```
+*  Chords
+
+Now we will learn, what a chord is: a Chord in a musical sense is a number of notes: Minimum 2, frequently 3 , sometimes more than 3 notes. The right structure for that would be an array, as we've seen above. For example: [60,64,67]. In Sonic Pi a Chord is defined as a ring, because often in melodys, consist of a loop, you will take single notes out of a chord. Since we've seen above, it's quiet easy to handle that with the ring as structure. Lets see and hear, how you can get chords in Sonic Pi:
+
+```
+puts chord(:c4, :major) # the same as [60,64,67].ring
+puts chord(:e4,:minor)
+```
 
 
 
