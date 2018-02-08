@@ -1,6 +1,6 @@
 * Any Questions last lesson?
 
-* Data-Structurs: Array as a special List
+* Data-Structurs: array and ring
 
 Tell the students, that playing two or more notes  parallel means a 'harmonic expression': it may cause a fresh feeling,
 also a melancholic feeling and so on. In Sonic pi it is very easy to do so: play 60 in one line and play 64 in second line (demonstrate).
@@ -23,5 +23,19 @@ until i > 2
    i = i + 1
 end
 ```
-A  datastructure (like an array) typically are also provided  with functions (in other languages: methods), which support a typical handling of that structure in a program. For example: [60,64,67].size provides the length of an Array. There are many different functions for any structure. It makes no sense to learn them: You will learn them automatically when programming and solve a problem. 
-Typically a program-language, which is designed for a special Problem-Domain, has its own structures. Here in Sonic Pi, created to make music, there are structures (combined with methods)  to support making music. One essential Structur is a ring:  
+A  datastructure (like an array) are also provided with functions (in other languages: methods), which support  handling of that structure in a program. For example: [60,64,67].size provides the length of an Array. There are many different functions for any structure. It makes no sense to learn them: You will learn them automatically when programming and solve a problem. 
+Typically a program-language, which is designed for a special problem-domain, has its own structures and functions to work with. Sonic Pi, created to make music, provides structures (combined with methods)  to support music programming. One essential structur in music is a *ring*, quite similar to an array: In Sonic Pi there are several ways to create a ring. For example: *[60,64,67].ring*. You will recognize the difference to an array, when you run a loop like this one:
+
+```
+i = 0  
+until  i > 1000 
+   puts ([60,64,67].ring)[i]
+   puts  [60,64,67][i]
+   sleep 1
+   i = i + 1
+end
+```
+
+
+
++
