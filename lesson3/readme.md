@@ -5,7 +5,7 @@
 Tell the students, that playing two or more notes  parallel means a 'harmonic expression': it may cause a fresh feeling,
 also a melancholic feeling and so on. In Sonic pi it is very easy to do so: play 60 in one line and play 64 in second line (demonstrate).
 Now, it's also possible to this in only one line by coding play [60,64]. So, it's now easy to guess, that you can also can code this:
-play [60,64,67]. Tell now: The construction [60,64,67] is a special, but fundamental structur you'll find in most language:  it's an Array.
+play [60,64,67]. Tell now: The construction [60,64,67] is a special, but fundamental structur you'll find in most languages:  it's an Array.
 If you program in Java or in Python in professional, you'll deal daily with this structure. An array is something, that may be seen as a 
 collection of objects, but with a further characteristic: Every element in that collection has a fix place-number. In our example, the 
 number 60 is on place 1, the number 64 place 2, and so on. The array [64,60,67] is formally seen not the same as [60,64,67]. In programming
