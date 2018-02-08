@@ -1,6 +1,6 @@
 * Any Questions last lesson?
 
-* Data-Structurs: array and ring
+* Data-Structurs: array and ring 
 
 Tell the students, that playing two or more notes  parallel means a 'harmonic expression': it may cause a fresh feeling,
 also a melancholic feeling and so on. In Sonic pi it is very easy to do so: play 60 in one line and play 64 in second line (demonstrate).
@@ -27,14 +27,49 @@ A  datastructure (like an array) are also provided with functions (in other lang
 Typically a program-language, which is designed for a special problem-domain, has its own structures and functions to work with. Sonic Pi, created to make music, provides structures (combined with methods)  to support music programming. One essential structur in music is a *ring*, quite similar to an array: In Sonic Pi there are several ways to create a ring. For example: *[60,64,67].ring*. You will recognize the difference to an array, when you run a loop like this one:
 
 ```
-i = 0  
-until  i > 1000 
-   puts ([60,64,67].ring)[i]
-   puts  [60,64,67][i]
+i = 0
+myArray = [60,64,67]
+myRing = [60,64,67].ring
+until  i > 1000
+   puts myRing [i]
+   puts myArray [i]
    sleep 1
    i = i + 1
 end
 ```
+You can see in the protokoll, that the puts runs periodically through the ring. This is very useful in a live_loop:
+```
+i = 0
+myRing = [60,64,67].ring
+live_loop :demo_ring do
+   play  myRing[i]
+   i = i + 1
+   sleep 1
+ end
+```
+in this live_loop you shouldn't take care of the right number of i. In an array you have to take care, that the number of i is not more than 2 (and not less than 0). Sonic Pi prevents also something special for you: the ticker in a live_loop. Run this and hear:
+
+```
+myRing = [60,64,67].ring
+live_loop :demo_ring do
+   play  myRing.tick
+   sleep 1
+ end
+```
+That is the same like the previous loop, except you should not use a index and should not increment the index. This will be done in the function (or: method) of the structur ring. Be aware,that internally is an index, which increments for you. you can take that internal index by using the variable *look*, as you can see:
+```
+myRing = [60,64,67].ring
+   live_loop :demo_ring do
+   play  myRing.tick
+   puts  look
+   sleep 1
+   play myRing.tick
+   #play  myRing.look
+   puts  look
+   sleep 1
+ end
+
+
 
 
 
