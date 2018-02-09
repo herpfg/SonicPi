@@ -81,7 +81,7 @@ myRing = [60,64,67].ring
 ```
 *  Chords
 
-Now we will learn, what a chord is: a Chord in a musical sense is a number of notes: Minimum 2, frequently 3 , sometimes more than 3 notes. The right structure for that would be an array, as we've seen above. For example: [60,64,67]. In Sonic Pi a chord is defined as a ring, because often in melodys, consist of a playing loop, you will take single notes out of a chord. Since we've seen above, it's quiet easy to handle that with the ring as structure. Lets see and hear, how you can get chords in Sonic Pi:
+Now we will learn, what a chord is: a chord in a musical sense is a number of notes: Minimum 2, frequently 3 , sometimes more than 3 notes. The right structure for that would be an array, as we've seen above. For example: [60,64,67]. In Sonic Pi a chord is defined as a ring, because often in melodys, consist of a playing loop, you will take single notes out of a chord. Since we've seen above, it's quiet easy to handle that with the ring as structure. Lets see and hear, how you can get chords in Sonic Pi:
 
 ```
 puts chord(:c4, :major) # the same as [60,64,67].ring
@@ -91,11 +91,11 @@ You will learn or already know, which rule chords play in music: You'll learn it
 
 * Lets program a Chord-Melody
 
-work: Program one bar, consist of 4 beats, playing chord( :a3,:minor) along this pattern: (X - - X - - X - X - X - - - X-) 
+work: Program one bar, consist of 4 beats, playing chord( :a3,:minor) along this pattern: (X - - X - - X - X - X - - - X-). Every sign stands for a sixteens of a bar.  
 
 * Lets define a function to shorten the code
 
-So, you have done this: you play one bar the chord in a special rhythm. Now, you should change the chord for the following bar, but the rythm should be the same. How would you now program that? Right, one way is: Copy the lines of code, paste it after the first bar and change the chord. Ok!. Then after the second bar, you should change the chord again. How would you do that? Ok: again we make it with copy and paste...So, what will grow up after i.e. 10 bars you always should change the chord? Yes: there would be tone's of source-code lines. Now we will learn, how we can get it simpler: define a *function* !
+So, you have done this: you play one bar the chord in a special rhythm. Now, you should change the chord for the following bar, but the rythm should be the same. How would you now do that? Right, one way is: Copy the lines of code, paste it after the first bar and change the chord. Ok!. Then after the second bar, you should change the chord again. How would you do that? Ok: again we make it with copy and paste...So, what will grow up after i.e. 10 bars you always should change the chord? Yes: there would be tone's of source-code lines. Now we will learn, how we can get it simpler: define a *function* ! (Look to the sheet 
 
 
 +
