@@ -95,7 +95,37 @@ work: Program one bar, consist of 4 beats, playing chord( :a3,:minor) along this
 
 * Lets define a function to shorten the code
 
-So, you have done this: you play one bar the chord in a special rhythm. Now, you should change the chord for the following bar, but the rythm should be the same. How would you now do that? Right, one way is: Copy the lines of code, paste it after the first bar and change the chord. Ok!. Then after the second bar, you should change the chord again. How would you do that? Ok: again we make it with copy and paste...So, what will grow up after i.e. 10 bars you always should change the chord? Yes: there would be tone's of source-code lines. Now we will learn, how we can get it simpler: define a *function* ! (Look to the sheet 
+So, you have done this: you play one bar the chord in a special rhythm. Now, you should change the chord for the following bar, but the rythm should be the same. How would you now do that? Right, one way is: Copy the lines of code, paste it after the first bar and change the chord. Ok!. Then after the second bar, you should change the chord again. How would you do that? Ok: again we make it with copy and paste...So, what will grow up after i.e. 10 bars you always should change the chord? Yes: there would be tone's of source-code lines. Now we will learn, how we can get it simpler: define a *function* ! (Look to the file workbuffer02  how to explain a function). Notice, that you can call a function in two syntactical ways. We now transfer our coded bar in a function with a chord as a parameter (look again in the workingbuffer02 how to do that). And now the students should do that with their own coded bar and should program a 6 bar loop with bpm = 116, and the following chord-progression:  4.times: a3-minor 1 time d3-minor 1 time f3major7.
+After that, the students should be aware of using a function: it helps, to minimalize the code! But there is a second reason, why you should do that: hiding complicated allgorythm! Example: when i code that: You will learn or already know, which rule chords play in music: You'll learn it in harmony teaching. Often in praxis  it's simply that: Chords sounds different, take a specially if it sounds good for you. There exists rules, which chords you should take in combination to design music. For now, you will get in a work-sheet, which chords you have to play. But before that will learn a special programming-construction, which may help you in programming:
+
+* Lets program a Chord-Melody
+
+work: Program one bar, consist of 4 beats, playing chord( :a3,:minor) along this pattern: (X - - X - - X - X - X - - - X-). Every sign stands for a sixteens of a bar.  
+
+* Lets define a function to shorten the code
+
+So, you have done this: you play one bar the chord in a special rhythm. Now, you should change the chord for the following bar, but the rythm should be the same. How would you now do that? Right, one way is: Copy the lines of code, paste it after the first bar and change the chord. Ok!. Then after the second bar, you should change the chord again. How would you do that? Ok: again we make it with copy and paste...So, what will grow up after i.e. 10 bars you always should change the chord? Yes: there would be tone's of source-code lines. Now we will learn, how we can get it simpler: define a *function* ! (Look to the file workbuffer02  how to explain a function). Notice, that you can call a function in two syntactical ways. We now transfer our coded bar in a function with a chord as a parameter (look again in the workingbuffer02 how to do that). And now the students should do that with their own coded bar and should program a 6 bar loop with bpm = 116, and the following chord-progression:  4.times: a3-minor 1 time d3-minor 1 time f3major7.
+After that, the students should be aware of using a function: it helps, to minimalize the code! But there is a second reason, why you should do that: hiding complicated allgorythm! Example: when i code that: 
+```
+chord(:a4,:major).map{ |each| each + 0.3}
+```
+you don't understand, what's going on. I can hide it in a function:
+
+```
+define :shiftNotesOfChord do |aChord|
+   chord(:a4,:major).map{ |each| each + 0.3}
+end
+```
+
+now you will have an idea, what's going on!
+
+
+  
+
+
+
+
+  
 
 
 +
