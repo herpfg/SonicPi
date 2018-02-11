@@ -112,12 +112,16 @@ chord(:a4,:major).map{ |each| each + 0.3}
 you don't understand, what's going on. I can hide it in a function:
 
 ```
-define :shiftNotesOfChord do |aChord|
+define :detuneChord do |aChord|
    chord(:a4,:major).map{ |each| each + 0.3}
 end
 ```
 
 now you will have an idea, what's going on!
+
+* Chordprogression
+
+As we've now a function, you should now create a live_loop looping around 6 bars with this chords: 4.times: a3-minor 1.time d3-minor 1.time f3major7. Add this loop to your further codes bassline and drumloop. Also insert a knob for Volume and experiment with the given synth's. 
 
 
   
