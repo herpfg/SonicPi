@@ -1,9 +1,10 @@
 
+
 use_bpm 116
-#schiebeRegler fuer alles
+#volume for All
 sr = 2
 #####################
-##   Mischpult  #####
+##   Mixer      #####
 #####################
 bassVolume = 0.8 * sr
 drumVolume = 0.3#0.3 * sr
@@ -34,7 +35,7 @@ define :playPattern  do |aChord|
   sleep 0.25
 end
 ##################
-live_loop :bassLauf do
+live_loop :bassLine do
   #stop
   sync :drums
   use_synth_defaults amp: bassVolume, release: 0.5
@@ -145,9 +146,8 @@ end
 live_loop :piano do
   #stop
   use_synth :piano
-  
   use_synth_defaults amp: pianoAmp
-  sync :bassLauf
+  sync :bassLine
   4.times do
     playPattern(chord(:a3,:minor))
   end
