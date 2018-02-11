@@ -3,7 +3,7 @@ use_bpm 116
 
 bassVolume = 2
 
-live_loop :bassLauf do
+live_loop :bassLine do
   use_synth_defaults amp: bassVolume, release: 0.5
   use_synth :fm
   # bar 1
