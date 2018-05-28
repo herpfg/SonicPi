@@ -11,7 +11,7 @@ Everyone should become the samples on the Computer and should build up a List of
 
 In generall you should explain, how to slice a sample and what you can do with rate:.
 
-* Create a live_loop gutar
+* Create a live_loop guitar
 
 now it's time to crate a live_loop like the :piano loop as a guitar_loop.
 
